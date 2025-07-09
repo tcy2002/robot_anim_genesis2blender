@@ -1,5 +1,9 @@
 ## Genesis机器人动画导出、导入Blender笔记
 
+### 最终效果
+
+![robot.gif](robot.gif)
+
 ### 背景
 
 需要将Genesis的机器人模拟数据以通用格式导出，然后导入Blender以制作高质量渲染效果。Genesis目前不支持通用场景格式导出（.usd），必须手写导出逻辑，Blender不支持mjcf/urdf等机器人通用格式的导入，但支持bvh和gltf格式，因此genesis可以采用导出bvh或gltf的两种方案；bvh是骨骼动画，格式简单，只关注骨骼节点的位置和旋转信息，导入blender后需要额外的绑定工作，gltf包括完整mesh和动画数据，一劳永逸。机器人模型是宇树h1带手
